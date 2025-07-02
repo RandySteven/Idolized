@@ -1,8 +1,10 @@
 package enums
 
+type RelationStatus string
+
 const (
-	Single     string = `Single`
-	InRelation        = `In-Relation`
-	Married           = `Married`
-	Private           = `Private`
+	Single     RelationStatus = `Single`
+	InRelation RelationStatus = `In-Relation`
+	Married    RelationStatus = `Married`
+	Private    RelationStatus = `Private`
 )

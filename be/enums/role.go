@@ -1,7 +1,9 @@
 package enums
 
+type RoleType string
+
 const (
-	Guest  string = `guest`
-	Member        = `member`
-	Talent        = `talent`
+	Guest  RoleType = `guest`
+	Member RoleType = `member`
+	Talent RoleType = `talent`
 )
