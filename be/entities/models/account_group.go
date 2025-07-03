@@ -2,9 +2,10 @@ package models
 
 import "time"
 
-type RoomChat struct {
+type AccountGroup struct {
 	ID        uint64
-	RoomName  string
+	AccountID uint64
+	GroupID   uint64
 	CreatedAt time.Time
 	UpdatedAt time.Time
 	DeletedAt *time.Time

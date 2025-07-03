@@ -13,9 +13,6 @@ type Record struct {
 	RecordEndDate   time.Time
 
 	CreatedAt time.Time
-	CreatedBy uint64
 	UpdatedAt time.Time
-	UpdatedBy uint64
 	DeletedAt *time.Time
-	DeletedBy *uint64
 }
