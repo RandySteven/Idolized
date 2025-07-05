@@ -11,8 +11,7 @@ type Record struct {
 	Duration        int32
 	RecordStartDate time.Time
 	RecordEndDate   time.Time
-
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt *time.Time
+	CreatedAt       time.Time
+	UpdatedAt       time.Time
+	DeletedAt       *time.Time
 }

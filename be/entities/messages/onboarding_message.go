@@ -1,4 +1,11 @@
 package messages
 
-type OnboardingMessage struct {
-}
+type (
+	OnboardingUserMessage struct {
+	}
+
+	OnboardingTalentMessage struct {
+	}
+
+	OnboardingGroupMessage struct{}
+)

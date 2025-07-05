@@ -6,7 +6,14 @@ import (
 )
 
 func initMigrations() []queries.MigrationQuery {
-	return []queries.MigrationQuery{}
+	return []queries.MigrationQuery{
+		queries.CreateAccountTable,
+		queries.CreateRoleTable,
+		queries.CreateUserTable,
+		queries.CreateGroupTable,
+		queries.CreateTalentTable,
+		queries.CreateGroupTalentTable,
+	}
 }
 
 func (m *mysqlClient) Migration(ctx context.Context) error {

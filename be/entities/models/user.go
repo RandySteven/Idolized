@@ -4,6 +4,9 @@ import "time"
 
 type User struct {
 	ID                uint64
+	AccountID         string
+	Email             string
+	Password          string
 	FullName          string
 	UserName          string
 	DateOfBirth       string
