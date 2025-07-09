@@ -1,4 +1,1 @@
-FROM ubuntu:latest
-LABEL authors="randy.steven"
-
-ENTRYPOINT ["top", "-b"]
+FROM golang:1.23.0-alpine
