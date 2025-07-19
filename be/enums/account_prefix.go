@@ -7,3 +7,7 @@ const (
 	TalentAccountPrefix AccountIDPrefix = `01`
 	GroupAccountPrefix  AccountIDPrefix = `03`
 )
+
+func (a AccountIDPrefix) String() string {
+	return string(a)
+}

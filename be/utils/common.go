@@ -3,6 +3,7 @@ package utils
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/RandySteven/Idolized/enums"
 	"github.com/google/uuid"
 	"github.com/nfnt/resize"
 	"image"
@@ -235,4 +236,22 @@ func WriteJSONObject[T any](obj *T) string {
 func FirstLastName(name string) (firstName, lastName string) {
 	userName := strings.Split(name, " ")
 	return userName[0], userName[1]
+}
+
+func AccountIDGenerate(accountType string) string {
+	prefix := ``
+	lenCode := 0
+	switch accountType {
+	case `USER`:
+		prefix = enums.UserAccountPrefix.String()
+		lenCode = 8
+	case `TALENT`:
+		prefix = enums.TalentAccountPrefix.String()
+		lenCode = 11
+	case `GROUP`:
+		prefix = enums.GroupAccountPrefix.String()
+		lenCode = 11
+	}
+
+	return prefix + GenerateCode(uint64(lenCode))
 }

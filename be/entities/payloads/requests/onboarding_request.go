@@ -9,6 +9,8 @@ type (
 	OnboardingUser struct {
 		FirstName string `json:"first_name"`
 		LastName  string `json:"last_name"`
+		UserName  string `json:"user_name"`
+		Gender    string `json:"gender"`
 		Date      string `json:"date"`
 		Month     string `json:"month"`
 		Year      string `json:"year"`

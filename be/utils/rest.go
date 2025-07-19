@@ -11,6 +11,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"os"
 	"reflect"
 	"strings"
 )
@@ -140,4 +141,12 @@ func ErrorHandler(w http.ResponseWriter, customErr *apperror.CustomError) {
 	w.WriteHeader(customErr.ErrCode())
 	response := responses.NewResponse("", nil, customErr, 500)
 	json.NewEncoder(w).Encode(&response)
+}
+
+func ReturnVerifyToken(token string) string {
+	host := os.Getenv(`HOST`)
+	port := os.Getenv(`PORT`)
+	url := fmt.Sprintf(`http://%s:%s`, host, port)
+	url += enums.OnboardingPrefix.ToString() + token
+	return url
 }

@@ -2,6 +2,6 @@ package repository_interfaces
 
 import "github.com/RandySteven/Idolized/entities/models"
 
-type UserRepository interface {
-	Saver[models.User]
+type AccountRepository interface {
+	Saver[models.Account]
 }
